@@ -50,7 +50,7 @@ class CartItem extends React.Component{
     
     render(){
         console.log(this.props)
-        const{price,title,qty}=this.props;
+        const{price,title,qty}=this.props.product;
         return(
               
               <div className="cart-item">
@@ -78,10 +78,10 @@ class CartItem extends React.Component{
                      <img
                       alt="delete"
                       className='action-icons'
-                      src="https://cdn-icons.flaticon.com/png/128/6096/premium/6096937.png?token=exp=1655751763~hmac=4c655942907de9f2688a2ef500983623"
+                      src="https://cdn-icons-png.flaticon.com/512/2602/2602768.png"
                       
                      />
-                   </div>
+                     </div>
                    
               </div>
             </div>

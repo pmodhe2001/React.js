@@ -5,21 +5,47 @@ class Cart extends React.Component{
   constructor(){
     super();
     this.state={
-        price:16999,
-        title:'MobilePhone',
-        qty:1,
-        img:''
+        products:[
+          {
+            price:2999,
+            title:"Watch",
+            qty:1,
+            img:'',
+            id:1
+          },
+          {
+            price:19550,
+            title:"Phone",
+            qty:4,
+            img:''
+            ,
+            id:2
+          },
+          {
+            price:89960,
+            title:"Laptop",
+            qty:10,
+            img:'',
+            id:3
+          }
+        ]
     }
     //this.increaseQty=this.increaseQty.bind(this);
 }
     render(){
-      const arr=[1,2,3,4,5];
+      const {products}=this.state;
         return(
              
               <div className='cart'>
-                <CartItem qty={1} price={(2,999).toLocaleString(undefined,{maximumFractionDigits:2})} title={'Watch'} img={''}/>
-                <CartItem/>
-                <CartItem/>
+                {
+                  products.map((product)=>{
+                    return  (
+                    <CartItem 
+                        product={product}
+                         key={product.id} />
+                    )
+                  }
+                )}
               </div>          
         );
     }
