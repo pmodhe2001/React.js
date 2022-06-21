@@ -11,14 +11,14 @@ class App extends React.Component{
             price:2999,
             title:"Watch",
             qty:1,
-            img:'https://unsplash.com/photos/TJrkkhdB39E',
+            img:'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=694&q=80',
             id:1
           },
           {
             price:19550,
             title:"Phone",
             qty:4,
-            img:'https://unsplash.com/photos/83ypHTv6J2M'
+            img:'https://images.unsplash.com/photo-1528795259021-d8c86e14354c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80'
             ,
             id:2
           },
@@ -75,7 +75,7 @@ getCartCount=()=>{
   return count;
 }
 
-getCartCount=()=>{
+getCartTotal=()=>{
   const{products}=this.state;
 
   let cartTotal=0;
@@ -97,10 +97,10 @@ render(){
        products={products}
        onIncreaseQty={this.handleIncreaseQty}
        onDecreaseQty={this.handleDecreaseQty}
-       onDeleteQty={this.handleDeleteProduct}
+       onDeleteProduct={this.handleDeleteProduct}
        />
        <div style={{padding:10,fontSize:20}}>
-        TOTAL : {this.getCartCount()}
+        TOTAL : {this.getCartTotal()}
        </div>
     </div>
   );

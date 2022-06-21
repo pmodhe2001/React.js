@@ -4,6 +4,7 @@ import React from 'react';
     
     const Navbar=(props)=>{
         return(
+            
               <div style={styles.nav}>
                 <div style={styles.cartIconContainer}>
                     <img style={styles.cartIcon} src='https://cdn-icons-png.flaticon.com/128/2331/2331970.png' alt='cart-icon'/>
@@ -16,7 +17,7 @@ import React from 'react';
 const styles={
     cartIcon:{
         height:32,
-        marginRight:20
+        marginRight:40
     },
     nav:{
         height:70,
